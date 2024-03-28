@@ -229,6 +229,16 @@ vim.api.nvim_create_autocmd('TabNew', {
   command = 'Neotree',
 })
 
+vim.api.nvim_create_augroup('AutoFormat', {})
+
+vim.api.nvim_create_autocmd('BufWritePost', {
+  pattern = '*.py',
+  group = 'AutoFormat',
+  callback = function()
+    vim.cmd 'silent !black --quiet %'
+    vim.cmd 'edit'
+  end,
+})
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -398,6 +408,7 @@ require('lazy').setup({
       -- Enable telescope extensions, if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'aerial')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
