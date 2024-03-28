@@ -220,6 +220,9 @@ return {
 
     -- Automatically open aerial when entering supported buffers.
     -- This can be a function (see :help aerial-open-automatic)
+    close_automatic_events = {
+        "unfocus",
+      },
     open_automatic = true,
 
     -- Run this command after jumping to a symbol (false will disable)
