@@ -3,8 +3,8 @@ return {
   dependencies = { 'neovim/nvim-lspconfig', 'nvim-telescope/telescope.nvim', 'mfussenegger/nvim-dap', 'mfussenegger/nvim-dap-python', 'microsoft/debugpy' },
   opts = {
     -- Your options go here
-    name = { 'venv', '.venv', '.python_env' },
-    auto_refresh = false,
+    name = { 'venv', '.venv'},
+    auto_refresh = true,
     dap_enabled = true,
   },
   event = 'VeryLazy', -- Optional: needed only if you want to type `:VenvSelect` without a keymapping
@@ -19,5 +19,6 @@ return {
       anaconda_base_path = '/opt/homebrew/Caskroom/miniconda/base',
       anaconda_envs_path = '/opt/homebrew/Caskroom/miniconda/base/envs',
     }
+    require('venv-selector').retrieve_from_cache()
   end,
 }
