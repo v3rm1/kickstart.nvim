@@ -62,7 +62,7 @@ return {
         opts = {
             options = {
                 icons_enabled = false,
-                theme = 'auto',
+                theme = 'dracula',
                 component_separators = '|',
                 section_separators = { '' },
                 -- component_separators = { left = '', right = '' },
