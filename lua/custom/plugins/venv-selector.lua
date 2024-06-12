@@ -1,3 +1,5 @@
+-- A simple neovim plugin to let you choose what virtual environment to activate in neovim.
+
 return {
   'linux-cultist/venv-selector.nvim',
   dependencies = { 'neovim/nvim-lspconfig', 'nvim-telescope/telescope.nvim', 'mfussenegger/nvim-dap', 'mfussenegger/nvim-dap-python', 'microsoft/debugpy' },

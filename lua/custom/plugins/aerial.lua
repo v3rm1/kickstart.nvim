@@ -1,3 +1,5 @@
+-- A code outline window for skimming and quick navigation
+
 return {
   'stevearc/aerial.nvim',
   opts = {},

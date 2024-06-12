@@ -1,3 +1,5 @@
+-- A plugin for managing and integrating your ollama workflows in neovim.
+
 return {
     "nomnivore/ollama.nvim",
     dependencies = {

@@ -1,3 +1,5 @@
+-- Send content from the current Neovim buffer to a configurable tmux pane.
+
 return {
     'EvWilson/slimux.nvim',
     config = function()
