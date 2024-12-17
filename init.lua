@@ -60,6 +60,9 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Setting cursor options in different modes, for information check :h guicursor 
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:hor25,r-cr-o:ver20"
+
 -- More space ini neovim command line for displaying messages
 vim.opt.cmdheight = 1
 

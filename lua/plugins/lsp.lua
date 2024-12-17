@@ -159,8 +159,7 @@ config = function()
     'python-lsp-server', -- Python LSP
     'usort', -- Python import sorter
     'docformatter', -- Python docstring formatter
-    'flake8', -- Python linter
-    'black', -- Python formatter
+    'ruff', -- Python formatter and linter
     'lua-language-server', -- lua LSP
   })
   require('mason-tool-installer').setup { ensure_installed = ensure_installed }
